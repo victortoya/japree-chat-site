@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Japree</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        header .app-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #6e6e73;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1d1d1f;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 15px;
+            color: #6e6e73;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 24px 80px;
+        }
+
+        .contact-card {
+            background: #007aff;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 32px;
+            color: #ffffff;
+        }
+
+        .contact-card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .contact-card a {
+            display: inline-block;
+            background: #ffffff;
+            color: #007aff;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            background: #f0f0f0;
+        }
+
+        section {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 16px;
+        }
+
+        section h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            color: #3a3a3c;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            display: flex;
+            gap: 14px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: #3a3a3c;
+            align-items: flex-start;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            height: 28px;
+            background: #007aff;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .step-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 15px;
+            color: #3a3a3c;
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .info-item {
+            background: #f5f5f7;
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .info-item .label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6e6e73;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .info-item .value {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+
+        @media (max-width: 480px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: #6e6e73;
+        }
+
+        footer a {
+            color: #007aff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="app-name">Japree</div>
+    <h1>Support Center</h1>
+    <p>We're here to help</p>
+</header>
+
+<div class="container">
+
+    <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p>Have a question, found a bug, or want to share feedback? Send us an email and we'll get back to you as soon as possible.</p>
+        <a href="mailto:toya.luckyrich@gmail.com">Send Email</a>
+    </div>
+
+    <section>
+        <h2>How to Use Japree</h2>
+        <ol class="step-list">
+            <li><strong>Fill In Your Profile</strong> — Open the Profile menu and enter your full name, Student ID (NIM), and department or faculty. This information will be automatically included in every message you compose.</li>
+            <li><strong>Create a New Message</strong> — Tap the add (+) button on the home screen to start composing a message.</li>
+            <li><strong>Select Message Components</strong> — Choose an opening greeting, time-of-day salutation, purpose of your message, your question or request, and a closing phrase.</li>
+            <li><strong>Preview Your Message</strong> — Review the fully composed message. You can edit the text directly if needed.</li>
+            <li><strong>Send or Save</strong> — Tap Send to share the message via WhatsApp, SMS, or any other app using the iOS Share Sheet. Or tap Save to store it for future use.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Is my data safe?</h3>
+            <p>Yes. All data — including your profile and message history — is stored only on your device and is never sent to our servers. Japree works entirely offline.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why do I need to fill in my profile first?</h3>
+            <p>Your name, Student ID, and department are automatically included in every message you compose. Without a complete profile, the app cannot generate a message.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Are my messages saved automatically?</h3>
+            <p>No. After composing a message, you need to tap <strong>Save</strong> on the Preview screen and enter a title for the message. Saved messages can be viewed and reused from the home screen.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I edit a saved message?</h3>
+            <p>Tap the message on the home screen to open it in the Preview screen. Edit the text directly in the message area, then tap Save to update it.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I delete a message?</h3>
+            <p>On the home screen, swipe left on the message item and tap Delete, or tap the delete icon. Confirm the deletion in the dialog that appears. Deleted messages cannot be recovered.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Will my data transfer if I switch to a new iPhone?</h3>
+            <p>No. Because all data is stored locally on your device, it will not transfer to a new device automatically. Be sure to note any important messages before switching devices.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why is the app asking for ad tracking permission?</h3>
+            <p>Japree displays ads from Google AdMob to support ongoing app development. The permission prompt is part of Apple's App Tracking Transparency (ATT) framework. You may decline personalized ads — the app will continue to work fully regardless of your choice.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is Japree available on Android?</h3>
+            <p>Japree is currently available on iOS only. We will announce any future Android availability through the App Store.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>App Information</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="label">App Name</div>
+                <div class="value">Japree</div>
+            </div>
+            <div class="info-item">
+                <div class="label">Platform</div>
+                <div class="value">iOS</div>
+            </div>
+            <div class="info-item">
+                <div class="label">Language</div>
+                <div class="value">Indonesian</div>
+            </div>
+            <div class="info-item">
+                <div class="label">Developer</div>
+                <div class="value">Victor Agung Sukarno</div>
+            </div>
+            <div class="info-item">
+                <div class="label">Contact</div>
+                <div class="value"><a href="mailto:toya.luckyrich@gmail.com">toya.luckyrich@gmail.com</a></div>
+            </div>
+            <div class="info-item">
+                <div class="label">Privacy</div>
+                <div class="value"><a href="privacy-policy.html">Privacy Policy</a></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 Japree. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
